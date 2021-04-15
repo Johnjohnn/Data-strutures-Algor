@@ -22,4 +22,15 @@ There is no index that satisfies the conditions in the problem statement.
 """
 def pivot_index(nums):
     # Your code here
+    # we need the index 
+    for i in range(len(nums)):
+        l_sum = sum(nums[0:i])
+        r_sum = sum(nums[i+1:])
+        if l_sum == r_sum:
+           return i 
+
+    return -1 
+
+print(pivot_index([1,7,3,6,5,6]))
+print(pivot_index([1,2,3]))
 
